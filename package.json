@@ -1,0 +1,21 @@
+{
+  "name": "frontful-playground",
+  "version": "0.0.4",
+  "private": true,
+  "scripts": {
+    "start": "frontful-environment start",
+    "build": "frontful-environment build"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "frontful-environment": "^0.0.4"
+  },
+  "eslintConfig": {
+    "extends": "frontful"
+  },
+  "babel": {
+    "presets": [
+      "frontful"
+    ]
+  }
+}
