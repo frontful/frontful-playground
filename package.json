@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "express": "^4.15.2",
-    "frontful-environment": "^0.0.4"
+    "frontful-environment": "^0.0.5"
   },
   "eslintConfig": {
     "extends": "frontful"
