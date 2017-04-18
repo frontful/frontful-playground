@@ -15,7 +15,7 @@ app.use((req, res) => {
           Frontful playground
         </h3>
         <div>
-          Experiments with build, code, packages and what-not
+          Experiments using frontful packages
         </div>
         <div>
           <img src="${logoBig}"/>

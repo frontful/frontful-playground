@@ -3,19 +3,11 @@
   "version": "0.0.4",
   "private": true,
   "scripts": {
-    "start": "frontful-environment start",
-    "build": "frontful-environment build"
+    "build": "frontful-environment build",
+    "start": "frontful-environment start"
   },
   "dependencies": {
     "express": "^4.15.2",
-    "frontful-environment": "^0.0.5"
-  },
-  "eslintConfig": {
-    "extends": "frontful"
-  },
-  "babel": {
-    "presets": [
-      "frontful"
-    ]
+    "frontful-environment": "0.x || 1.x"
   }
 }
