@@ -1,4 +1,10 @@
-import logoBig from '../../assets/logo.big.png'
-
 console.log(`Frontful playground`)
-console.log(logoBig)
+
+window.frontful.enviroment.coldreload.serializer = () => {
+  return {
+    value: 0,
+  }
+}
+
+window.frontful.enviroment.coldreload.deserializer = () => {
+}
