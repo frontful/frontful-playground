@@ -1,10 +1,6 @@
 import logo from '../../assets/logo.png'
 
 const requestListener = (req, res) => {
-  if (global.frontful.environment.coldreload.state) {
-    console.log('State restored', global.frontful.environment.coldreload.state)
-  }
-
   res.end(`
     <!DOCTYPE html>
     <html lang="en">
@@ -18,6 +14,7 @@ const requestListener = (req, res) => {
         <div>
           <img src="${logo}"/>
         </div>
+        <script src="${'/assets/vendor.js'}"></script>
         <script src="${'/assets/main.js'}"></script>
       </body>
     </html>
