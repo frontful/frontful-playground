@@ -1,13 +1,13 @@
 {
   "name": "frontful-playground",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "build": "frontful-environment build",
-    "start": "frontful-environment start"
+    "start": "frontful-environment start",
+    "start:build": "frontful-environment build && PORT=8000 node ./build/server"
   },
   "dependencies": {
-    "express": "^4.15.2",
     "frontful-environment": "0.x || 1.x"
   }
 }

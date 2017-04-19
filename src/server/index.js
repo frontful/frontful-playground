@@ -1,11 +1,12 @@
-import express from 'express'
-import logoBig from '../../assets/logo.big.png'
-import logoSmall from '../../assets/logo.small.png'
+import logo from '../../assets/logo.png'
 
-const app = express()
+const requestListener = (req, res) => {
+  if (global.frontful.environment.coldreload.state) {
+    console.log('State restored', global.frontful.environment.coldreload.state)
+  }
 
-app.use((req, res) => {
-  res.send(`<!DOCTYPE html>
+  res.end(`
+    <!DOCTYPE html>
     <html lang="en">
       <head>
         <title>Frontful playground</title>
@@ -15,16 +16,14 @@ app.use((req, res) => {
           Frontful playground
         </h3>
         <div>
-          Experiments using frontful packages
-        </div>
-        <div>
-          <img src="${logoBig}"/>
-          <img src="${logoSmall}"/>
+          <img src="${logo}"/>
         </div>
         <script src="${'/assets/main.js'}"></script>
       </body>
     </html>
   `)
-})
+}
 
-export default app
+// Server index must export request listener
+// Request listener can also be an Express app
+export default requestListener

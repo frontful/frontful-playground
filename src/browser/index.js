@@ -1,10 +1,13 @@
 console.log(`Frontful playground`)
 
-window.frontful.enviroment.coldreload.serializer = () => {
-  return {
-    value: 0,
+window.frontful.environment.coldreload.serializer = () => {
+  const state = {
+    Hello: "state"
   }
+  console.log("State stored", state)
+  return state
 }
 
-window.frontful.enviroment.coldreload.deserializer = () => {
+window.frontful.environment.coldreload.deserializer = (state) => {
+  console.log("State restored", state)
 }
