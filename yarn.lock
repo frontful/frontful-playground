@@ -1807,8 +1807,8 @@ form-data@~2.1.1:
     object-path "^0.11.4"
 
 "frontful-environment@0.x || 1.x":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.10.tgz#d7871e1caef00fc05c09667baa67acfe3554abd5"
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.11.tgz#118f0524427cafb60630207d76533bdd11a2c495"
   dependencies:
     babel-loader "^6.4.1"
     babel-preset-frontful "0.x || 1.x"
@@ -1825,6 +1825,7 @@ form-data@~2.1.1:
     lodash.uniq "^4.5.0"
     memory-fs "^0.4.1"
     object-path "^0.11.4"
+    pad "^1.1.0"
     rimraf "^2.6.1"
     socket.io "^1.7.3"
     socket.io-client "^1.7.3"
@@ -2330,10 +2331,8 @@ jsprim@^1.2.2:
     verror "1.3.6"
 
 jsx-ast-utils@^1.0.0, jsx-ast-utils@^1.3.4:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-1.4.0.tgz#5afe38868f56bc8cc7aeaef0100ba8c75bd12591"
-  dependencies:
-    object-assign "^4.1.0"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-1.4.1.tgz#3867213e8dd79bf1e8f2300c0cfc1efb182c0df1"
 
 kind-of@^3.0.2:
   version "3.1.0"
@@ -2678,6 +2677,10 @@ osenv@^0.1.4:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
+
+pad@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/pad/-/pad-1.1.0.tgz#7a7d185200ebac32f9f12ee756c3a1d087b3190b"
 
 pako@~0.2.0:
   version "0.2.9"
