@@ -734,8 +734,8 @@ babel-preset-flow@^6.23.0:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
 "babel-preset-frontful@0.x || 1.x":
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/babel-preset-frontful/-/babel-preset-frontful-0.0.16.tgz#55ac0d4f1fecae252cd316c8c3a00a62bcacfa76"
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/babel-preset-frontful/-/babel-preset-frontful-0.0.18.tgz#21d811aab0771b76f2de624df00b343caa2e9d92"
   dependencies:
     babel-plugin-add-module-exports "^0.2.1"
     babel-plugin-transform-class-properties "^6.24.1"
@@ -745,6 +745,7 @@ babel-preset-flow@^6.23.0:
     babel-plugin-transform-runtime "^6.23.0"
     babel-preset-env "^1.3.3"
     babel-preset-react "^6.24.1"
+    frontful-common "0.x || 1.x"
     frontful-config "0.x || 1.x"
     object-path "^0.11.4"
   optionalDependencies:
@@ -1507,8 +1508,8 @@ escope@^3.6.0:
     estraverse "^4.1.1"
 
 "eslint-config-frontful@0.x || 1.x":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/eslint-config-frontful/-/eslint-config-frontful-0.0.11.tgz#d99bb888a3a5d2ed7d0f06990f2a29dede421a6e"
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/eslint-config-frontful/-/eslint-config-frontful-0.0.13.tgz#2c03ca94a57eeba54e1ed8b88df9e09248805f19"
   dependencies:
     babel-eslint "^7.2.1"
     eslint "^3.19.0"
@@ -1790,17 +1791,24 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+"frontful-common@0.x || 1.x":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/frontful-common/-/frontful-common-0.0.5.tgz#20673589ae53ac159d9ea5d8103b7a76a66e13f6"
+  dependencies:
+    frontful-config "0.x || 1.x"
+    object-path "^0.11.4"
+
 "frontful-config@0.x || 1.x":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/frontful-config/-/frontful-config-0.0.6.tgz#393af555121eb1c31940d851db681d6a14158a8c"
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/frontful-config/-/frontful-config-0.0.9.tgz#48d4a9cd06aae9ce4e2be5ed559be82962134b5d"
   dependencies:
     deep-extend "^0.4.1"
     js-yaml "^3.8.3"
     object-path "^0.11.4"
 
 "frontful-environment@0.x || 1.x":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.9.tgz#8b4dbcfc5b1fc9c90e4ae3912d584e9d93ba093a"
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.10.tgz#d7871e1caef00fc05c09667baa67acfe3554abd5"
   dependencies:
     babel-loader "^6.4.1"
     babel-preset-frontful "0.x || 1.x"
@@ -1810,6 +1818,7 @@ form-data@~2.1.1:
     chokidar "^1.6.1"
     eslint-config-frontful "0.x || 1.x"
     file-loader "^0.11.1"
+    frontful-common "0.x || 1.x"
     frontful-config "0.x || 1.x"
     json-loader "^0.5.4"
     lodash.debounce "^4.0.8"
