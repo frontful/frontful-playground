@@ -1,5 +1,5 @@
 {
-  "name": "frontful-playground",
+  "name": "__project_name__",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,15 @@
     "start": "frontful-environment start",
     "start:build": "frontful-environment build && PORT=8000 node ./build/server"
   },
+  "frontful": {
+    "config": "./config.js"
+  },
   "dependencies": {
-    "frontful-environment": "0.x || 1.x"
+    "express": "^4.15.2",
+    "frontful-config": "0.x || 1.x",
+    "frontful-environment": "0.x || 1.x",
+    "normalize.css": "^6.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   }
 }
