@@ -1,7 +1,8 @@
 {
-  "name": "__project_name__",
+  "name": "frontful-playground",
   "version": "1.0.0",
   "private": true,
+  "description": "Playground and experiments on Frontful infrastructure",
   "scripts": {
     "build": "frontful-environment build",
     "start": "frontful-environment start",
@@ -14,6 +15,7 @@
     "express": "^4.15.2",
     "frontful-config": "0.x || 1.x",
     "frontful-environment": "0.x || 1.x",
+    "frontful-style": "0.x || 1.x",
     "normalize.css": "^6.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"

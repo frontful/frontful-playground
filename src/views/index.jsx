@@ -1,12 +1,12 @@
 import React from 'react'
 import Main from './layouts/main/Main'
-import Home from './pages/home/Home'
-import About from './pages/about/About'
+import Root from './pages/root/Root'
+import Experiments from './pages/experiments/Experiments'
 import Notfound from './pages/notfound/Notfound'
 
 const routes = {
-  '/' : <Home />,
-  '/about': <About />,
+  '/': <Root />,
+  '/experiments': <Experiments />,
 }
 
 export default class Views extends React.PureComponent {

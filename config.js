@@ -1,5 +1,8 @@
 export default {
   common: {
-    footnote: "__project_name__"
-  }
+  },
+  browser: {
+  },
+  server: {
+  },
 }
