@@ -1,6 +1,6 @@
+import assets from './assets'
 import express from 'express'
 import main from './main'
-import assets from './assets'
 
 const app = express()
 

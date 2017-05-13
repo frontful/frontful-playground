@@ -4,9 +4,7 @@ import {TodoItem} from './TodoItem'
 @register('todo')
 @format({
   filter: null,
-  items: format.array(
-    format.model(TodoItem)
-  )
+  items: format.array(format.model(TodoItem))
 })
 export class Todo extends Model {
 }

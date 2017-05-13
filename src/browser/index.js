@@ -26,14 +26,20 @@ const input = {
   ]
 }
 
-let todo, json, jsonAfter
+let todo, json, jsonAfter, match
 todo = new Todo(input)
 json = todo.serialize()
 todo = new Todo(json)
 jsonAfter = todo.serialize()
-console.log('Serialized:', json)
-console.log('Reserialized:', jsonAfter)
-console.log('Match:', JSON.stringify(json) === JSON.stringify(jsonAfter))
+match = JSON.stringify(json) === JSON.stringify(jsonAfter)
+
+if (match) {
+  console.info('serialized === reserialized')
+}
+else {
+  console.warn('serialized !== reserialized')
+}
+
 console.log(JSON.stringify(jsonAfter, null, 2))
 
 ReactDOM.render(
