@@ -18,7 +18,7 @@ import backgroundImage from '../../../../assets/img/background.png'
     textAlign: 'center',
   })
 
-  css('.header > a', {
+  css('.header > a, .footer > a', {
     color: '#277cbc',
     margin: '0 10px',
     textDecoration: 'none',
@@ -29,8 +29,12 @@ import backgroundImage from '../../../../assets/img/background.png'
   })
 
   css('.content', {
+    alignItems: 'center',
     backgroundImage: `url(${backgroundImage})`,
+    backgroundPosition: 'center center',
+    display: 'flex',
     flexGrow: '1',
+    justifyContent: 'center',
   })
 })
 export default class Main extends React.PureComponent {
@@ -39,16 +43,14 @@ export default class Main extends React.PureComponent {
     return (
       <div className={style.css('container')}>
         <div className={style.css('header')}>
-          <Link href="/">Root</Link>
-          <Link href="/experiments">Experiments</Link>
+          <Link href="/png">PNG</Link>
+          <Link href="/svg">SVG</Link>
         </div>
         <div className={style.css('content')}>
           {this.props.children}
         </div>
         <div className={style.css('footer')}>
-          <span>
-            &nbsp;
-          </span>
+          <Link href="/">FRONTFUL</Link>
         </div>
       </div>
     )

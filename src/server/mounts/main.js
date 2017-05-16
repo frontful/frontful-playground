@@ -8,28 +8,39 @@ import {styleManager} from 'frontful-style'
 
 const app = express()
 
-app.use((req, res) => {
+function render(req) {
   const sessionStyleManager = styleManager.getSession(req.headers['user-agent'])
+  const view = ReactDOMServer.renderToString(
+    <StyleManager sessionStyleManager={sessionStyleManager}>
+      <Views path={req.url} />
+    </StyleManager>
+  )
+  return {
+    config: browserConfig.getScript(),
+    style: sessionStyleManager.renderToString(),
+    view: view,
+  }
+}
+
+app.use((req, res) => {
+  const assets = global.frontful.environment.assets
+  const html = render(req)
+
   res.send(`
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <title>Frontful playground</title>
-        <link rel="stylesheet" href="${global.frontful.environment.assets.css.main}">
-        ${sessionStyleManager.renderToString()}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+        <link rel="stylesheet" href="${assets.css.main}">
+        ${html.style}
         <noscript id="sidx"></noscript>
       </head>
       <body>
-        <div id="app">${
-          ReactDOMServer.renderToString(
-            <StyleManager sessionStyleManager={sessionStyleManager}>
-              <Views path={req.url} />
-            </StyleManager>
-          )
-        }</div>
-        ${browserConfig.getScript()}
-        <script src="${global.frontful.environment.assets.js.vendor}"></script>
-        <script src="${global.frontful.environment.assets.js.main}"></script>
+        <div id="app">${html.view}</div>
+        ${html.config}
+        <script src="${assets.js.vendor}"></script>
+        <script src="${assets.js.main}"></script>
       </body>
     </html>
   `)

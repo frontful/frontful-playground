@@ -1,12 +1,13 @@
 import React from 'react'
 import Main from './layouts/main/Main'
-import Root from './pages/root/Root'
-import Experiments from './pages/experiments/Experiments'
+import Png from './pages/png/Png'
+import Svg from './pages/svg/Svg'
 import Notfound from './pages/notfound/Notfound'
 
 const routes = {
-  '/': <Root />,
-  '/experiments': <Experiments />,
+  '/': <Png />,
+  '/png': <Png />,
+  '/svg': <Svg />,
 }
 
 export default class Views extends React.PureComponent {

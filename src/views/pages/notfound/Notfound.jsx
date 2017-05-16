@@ -3,7 +3,8 @@ import style from 'frontful-style/react'
 
 @style(({css}) => {
   css('.container', {
-    fontSize: '300px',
+    color: '#277cbc',
+    fontSize: '100px',
     margin: '25px',
     textAlign: 'center',
   })

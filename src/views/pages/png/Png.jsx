@@ -4,11 +4,18 @@ import style from 'frontful-style/react'
 
 @style(({css}) => {
   css('.container', {
-    margin: '35px',
+    alignSelf: 'center',
+    height: '30%',
     textAlign: 'center',
+    width: '200px',
+  })
+
+  css('.container > img', {
+    height: '100%',
+    width: '100%',
   })
 })
-export default class Root extends React.PureComponent {
+export default class Png extends React.PureComponent {
   render() {
     const {style} = this.props
     return (
