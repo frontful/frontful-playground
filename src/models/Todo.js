@@ -1,9 +1,14 @@
-import {Model, format} from 'frontful-model'
 import {TodoItem} from './TodoItem'
+import {model, format} from 'frontful-model'
 
-@format({
+@model.format({
   filter: null,
-  items: format.array(format.model(TodoItem))
+  items: format.array(format.model(TodoItem)),
 })
-export class Todo extends Model {
+export class Todo {
+  add(text) {
+    this.items.push({
+      text
+    })
+  }
 }

@@ -4,43 +4,38 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Views from '../views'
 import {StyleManager} from 'frontful-style/react'
-import {Todo} from '../models/Todo'
+import {Project} from '../models/Project'
 
-const input = {
+import {autorun} from 'mobx'
+
+const data = {
   filter: 'todo',
+  name: 'frontful',
   items: [
     {
       text: 'Alien: Covenant',
       compleated: true,
       tags: {
         todo: null,
-      }
+      },
     },
     {
       text: 'Fix my life',
       compleated: false,
       tags: {
         todo: null,
-      }
-    }
-  ]
+      },
+    },
+  ],
 }
 
-let todo, json, jsonAfter, match
-todo = new Todo(input)
-json = todo.serialize()
-todo = new Todo(json)
-jsonAfter = todo.serialize()
-match = JSON.stringify(json) === JSON.stringify(jsonAfter)
+const project = new Project(data)
 
-if (match) {
-  console.info('serialized === reserialized')
-}
-else {
-  console.warn('serialized !== reserialized')
-}
+autorun(() => {
+  console.log('[autorun] project:', JSON.stringify(project.serialize(), null, 2))
+})
 
-console.log(JSON.stringify(jsonAfter, null, 2))
+project.add('work')
 
 ReactDOM.render(
   <StyleManager>
