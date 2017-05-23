@@ -3,6 +3,26 @@ import Link from '../../common/components/link'
 import style from 'frontful-style/react'
 import backgroundImage from '../../../../assets/img/background.png'
 
+class Main extends React.PureComponent {
+  render() {
+    const {style} = this.props
+    return (
+      <div className={style.css('container')}>
+        <div className={style.css('header')}>
+          <Link href="/png">PNG</Link>
+          <Link href="/svg">SVG</Link>
+        </div>
+        <div className={style.css('content')}>
+          {this.props.children}
+        </div>
+        <div className={style.css('footer')}>
+          <Link href="/">FRONTFUL</Link>
+        </div>
+      </div>
+    )
+  }
+}
+
 @style(({css}) => {
   css('.container', {
     display: 'flex',
@@ -37,22 +57,5 @@ import backgroundImage from '../../../../assets/img/background.png'
     justifyContent: 'center',
   })
 })
-export default class Main extends React.PureComponent {
-  render() {
-    const {style} = this.props
-    return (
-      <div className={style.css('container')}>
-        <div className={style.css('header')}>
-          <Link href="/png">PNG</Link>
-          <Link href="/svg">SVG</Link>
-        </div>
-        <div className={style.css('content')}>
-          {this.props.children}
-        </div>
-        <div className={style.css('footer')}>
-          <Link href="/">FRONTFUL</Link>
-        </div>
-      </div>
-    )
-  }
+export default class extends Main {
 }

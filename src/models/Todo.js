@@ -6,9 +6,4 @@ import {model, format} from 'frontful-model'
   items: format.array(format.model(TodoItem)),
 })
 export class Todo {
-  add(text) {
-    this.items.push({
-      text
-    })
-  }
 }

@@ -4,38 +4,34 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Views from '../views'
 import {StyleManager} from 'frontful-style/react'
-import {Project} from '../models/Project'
-
 import {autorun} from 'mobx'
 
-const data = {
+import {Project} from '../models/Project'
+
+const project = new Project({
   filter: 'todo',
-  name: 'frontful',
+  name: 'Zoo',
   items: [
     {
-      text: 'Alien: Covenant',
+      text: 'Capybara',
       compleated: true,
       tags: {
         todo: null,
       },
     },
     {
-      text: 'Fix my life',
+      text: 'Kangaroo',
       compleated: false,
       tags: {
         todo: null,
       },
     },
   ],
-}
-
-const project = new Project(data)
+})
 
 autorun(() => {
   console.log('[autorun] project:', JSON.stringify(project.serialize(), null, 2))
 })
-
-project.add('work')
 
 ReactDOM.render(
   <StyleManager>
