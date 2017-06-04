@@ -13,4 +13,7 @@ class B extends A {
   items: format.array(format.model(ProjectItem)),
 })
 export class Project extends B {
+  removeItem(item) {
+    return this.items.splice(this.items.indexOf(item), 1).length > 0
+  }
 }
