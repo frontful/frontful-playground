@@ -6,4 +6,7 @@ import {model, format} from 'frontful-model'
   items: format.array(format.model(TodoItem)),
 })
 export class Todo {
+  removeItem(item) {
+    return this.items.splice(this.items.indexOf(item), 1).length > 0
+  }
 }

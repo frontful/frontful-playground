@@ -5,17 +5,11 @@ import ReactDOM from 'react-dom'
 import Views from '../views'
 import {Models} from 'frontful-model'
 import {StyleManager} from 'frontful-style/react'
-import {autorun} from 'mobx'
+import {autorun, action} from 'mobx'
 
 import {Project} from '../models/Project'
 
-const dependencies = {
-  log(message) {
-    console.log(message)
-  }
-}
-
-const models = new Models(dependencies)
+const models = new Models()
 
 window.frontful.environment.coldreload.serializer = () => {
   return models.serialize()
@@ -36,21 +30,28 @@ autorun(() => {
 })
 
 if (project.items.length === 0) {
-  project.items.push({
-    text: 'Capybara',
-    compleated: true,
-    tags: {
-      todo: null,
-    },
-  })
+  // Test simple actions on project model
+  action(() => {
+    project.items.push({
+      text: 'Capybara',
+      compleated: true,
+      tags: {
+        todo: null,
+      },
+    })
 
-  project.items.push({
-    text: 'Kangaroo',
-    compleated: false,
-    tags: {
-      todo: null,
-    },
-  })
+    project.items.push({
+      text: 'Kangaroo',
+      compleated: false,
+      tags: {
+        todo: null,
+      },
+    })
+
+    project.items.push({})
+
+    project.items[2].remove()
+  })()
 }
 
 ReactDOM.render(
