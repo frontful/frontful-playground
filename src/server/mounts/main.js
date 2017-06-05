@@ -12,7 +12,7 @@ function render(req) {
   const sessionStyleManager = styleManager.getSession(req.headers['user-agent'])
   const view = ReactDOMServer.renderToString(
     <StyleManager sessionStyleManager={sessionStyleManager}>
-      <Views path={req.url} />
+      <Views/>
     </StyleManager>
   )
   return {
