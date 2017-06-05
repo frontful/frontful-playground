@@ -9,7 +9,13 @@ import {autorun} from 'mobx'
 
 import {Project} from '../models/Project'
 
-const models = new Models()
+const dependencies = {
+  log(message) {
+    console.log(message)
+  }
+}
+
+const models = new Models(dependencies)
 
 window.frontful.environment.coldreload.serializer = () => {
   return models.serialize()
@@ -29,21 +35,23 @@ autorun(() => {
   console.log('[autorun] project:', JSON.stringify(project.serialize(), null, 2))
 })
 
-project.items.push({
-  text: 'Capybara',
-  compleated: true,
-  tags: {
-    todo: null,
-  },
-})
+if (project.items.length === 0) {
+  project.items.push({
+    text: 'Capybara',
+    compleated: true,
+    tags: {
+      todo: null,
+    },
+  })
 
-project.items.push({
-  text: 'Kangaroo',
-  compleated: false,
-  tags: {
-    todo: null,
-  },
-})
+  project.items.push({
+    text: 'Kangaroo',
+    compleated: false,
+    tags: {
+      todo: null,
+    },
+  })
+}
 
 ReactDOM.render(
   <StyleManager>
