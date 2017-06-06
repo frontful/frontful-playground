@@ -1301,6 +1301,10 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
+core-decorators@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/core-decorators/-/core-decorators-0.19.0.tgz#28c9b44aa6208902934627a28f4f5950bd5b463e"
+
 core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
@@ -2193,8 +2197,8 @@ fresh@0.5.0:
     object-path "^0.11.4"
 
 "frontful-environment@0.x || 1.x":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.21.tgz#281accb0c27633bfbcaeff19b7610b974b42546f"
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.22.tgz#4a98848d395828bec2915c4a165037b1a46cfc84"
   dependencies:
     autoprefixer "^7.0.1"
     babel-core "^6.24.1"
@@ -2230,22 +2234,22 @@ fresh@0.5.0:
     webpack "^2.3.3"
     webpack-node-externals "^1.5.4"
 
-frontful-model@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/frontful-model/-/frontful-model-0.0.5.tgz#6cd081a6de451b2365e8408271b236eca319b7b2"
+"frontful-model@0.x || 1.x":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/frontful-model/-/frontful-model-0.0.7.tgz#658c1921cc193955ce2ee834dc74f3813ed91f9d"
   dependencies:
     deep-extend "^0.5.0"
 
 "frontful-resolver@0.x || 1.x":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/frontful-resolver/-/frontful-resolver-0.0.5.tgz#f7de8ed7d643890364783c7734e6a46a086d2710"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/frontful-resolver/-/frontful-resolver-0.0.8.tgz#66d21e1f85bea320259e9283d572f3ddadf765f8"
   dependencies:
     es6-error "^4.0.2"
     mobx-react "^4.1.8"
 
 "frontful-router@0.x || 1.x":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/frontful-router/-/frontful-router-0.0.2.tgz#101a26f89fb22b61dc228439a996e6753c282d6e"
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/frontful-router/-/frontful-router-0.0.3.tgz#e4309959e4c1cb2de00b4e50dcae8712e26089e9"
   dependencies:
     es6-error "^4.0.2"
     history "^4.6.1"
@@ -2253,8 +2257,8 @@ frontful-model@^0.0.5:
     query-string "^4.3.4"
 
 "frontful-style@0.x || 1.x":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/frontful-style/-/frontful-style-0.0.8.tgz#2925e5c51b4fb6ddb01d4c43bab038a2b8abddd8"
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/frontful-style/-/frontful-style-0.0.9.tgz#a06c1ad8c7c09d3d803f4def8868c9c9d50721cd"
   dependencies:
     inline-style-prefixer "^3.0.2"
     lodash "^4.17.4"
@@ -4059,14 +4063,14 @@ read-pkg@^2.0.0:
     path-type "^2.0.0"
 
 readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.2.2, readable-stream@^2.2.6:
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.10.tgz#effe72bb7c884c0dd335e2379d526196d9d011ee"
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.11.tgz#0796b31f8d7688007ff0b93a8088d34aa17c0f72"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
     process-nextick-args "~1.0.6"
-    safe-buffer "^5.0.1"
+    safe-buffer "~5.0.1"
     string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
 
@@ -4277,11 +4281,7 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
-safe-buffer@^5.0.1:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.0.tgz#fe4c8460397f9eaaaa58e73be46273408a45e223"
-
-safe-buffer@~5.0.1:
+safe-buffer@^5.0.1, safe-buffer@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
 
@@ -4567,10 +4567,10 @@ string_decoder@^0.10.25:
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
 string_decoder@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.1.tgz#62e200f039955a6810d8df0a33ffc0f013662d98"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.2.tgz#b29e1f4e1125fa97a10382b8a533737b7491e179"
   dependencies:
-    safe-buffer "^5.0.1"
+    safe-buffer "~5.0.1"
 
 stringstream@~0.0.4:
   version "0.0.5"

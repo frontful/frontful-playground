@@ -21,8 +21,12 @@ function render(req, res) {
   })
 
   const resolver = new Resolver(<Views/>, {
-    models
+    models: models,
   })
+
+  if (global.frontful.environment.coldreload.state) {
+    models.deserialize(global.frontful.environment.coldreload.state)
+  }
 
   return resolver.execute().then((Views) => {
     const sessionStyleManager = styleManager.getSession(req.headers['user-agent'])

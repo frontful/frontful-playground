@@ -12,10 +12,11 @@
     "config": "./config.js"
   },
   "dependencies": {
+    "core-decorators": "^0.19.0",
     "express": "^4.15.2",
     "frontful-config": "0.x || 1.x",
     "frontful-environment": "0.x || 1.x",
-    "frontful-model": "^0.0.5",
+    "frontful-model": "0.x || 1.x",
     "frontful-resolver": "0.x || 1.x",
     "frontful-router": "0.x || 1.x",
     "frontful-style": "0.x || 1.x",
