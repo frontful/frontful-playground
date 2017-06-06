@@ -1,9 +1,9 @@
 import {TodoItem} from './TodoItem'
-import {model, format} from 'frontful-model'
+import {model, formatter} from 'frontful-model'
 
 @model.format({
-  filter: null,
-  items: format.array(format.model(TodoItem)),
+  filter: '',
+  items: formatter.array(formatter.model(TodoItem)),
 })
 export class Todo {
   removeItem(item) {

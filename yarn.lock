@@ -2182,8 +2182,8 @@ fresh@0.5.0:
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.0.tgz#f474ca5e6a9246d6fd8e0953cfa9b9c805afa78e"
 
 "frontful-common@0.x || 1.x":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/frontful-common/-/frontful-common-0.0.9.tgz#d7781cc4b53caf0b6adb5363753764800735db27"
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/frontful-common/-/frontful-common-0.0.10.tgz#2ed6471f50dfd7437b2a69a6ce3f79fdcc2cede7"
   dependencies:
     frontful-config "0.x || 1.x"
     object-path "^0.11.4"
@@ -2197,8 +2197,8 @@ fresh@0.5.0:
     object-path "^0.11.4"
 
 "frontful-environment@0.x || 1.x":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.22.tgz#4a98848d395828bec2915c4a165037b1a46cfc84"
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/frontful-environment/-/frontful-environment-0.0.23.tgz#d38bfc1a0636fbccc989d689d41709e9ee3031c7"
   dependencies:
     autoprefixer "^7.0.1"
     babel-core "^6.24.1"
@@ -2214,6 +2214,7 @@ fresh@0.5.0:
     file-loader "^0.11.1"
     frontful-common "0.x || 1.x"
     frontful-config "0.x || 1.x"
+    frontful-utils "0.x || 1.x"
     json-loader "^0.5.4"
     lodash.debounce "^4.0.8"
     lodash.isplainobject "^4.0.6"
@@ -2235,34 +2236,41 @@ fresh@0.5.0:
     webpack-node-externals "^1.5.4"
 
 "frontful-model@0.x || 1.x":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/frontful-model/-/frontful-model-0.0.7.tgz#658c1921cc193955ce2ee834dc74f3813ed91f9d"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/frontful-model/-/frontful-model-0.0.8.tgz#6fc0d3dd59d0046865ad7681d98b94a3405fbbcd"
   dependencies:
     deep-extend "^0.5.0"
 
 "frontful-resolver@0.x || 1.x":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/frontful-resolver/-/frontful-resolver-0.0.8.tgz#66d21e1f85bea320259e9283d572f3ddadf765f8"
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/frontful-resolver/-/frontful-resolver-0.0.9.tgz#6ac4b8db26efb164b20e264b3f42b865a3bab8c6"
   dependencies:
     es6-error "^4.0.2"
+    frontful-utils "0.x || 1.x"
     mobx-react "^4.1.8"
 
 "frontful-router@0.x || 1.x":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/frontful-router/-/frontful-router-0.0.3.tgz#e4309959e4c1cb2de00b4e50dcae8712e26089e9"
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/frontful-router/-/frontful-router-0.0.4.tgz#a4691bc28d105cb7e1c2775f36e06676e24c7777"
   dependencies:
     es6-error "^4.0.2"
+    frontful-utils "0.x || 1.x"
     history "^4.6.1"
     prop-types "^15.5.10"
     query-string "^4.3.4"
 
 "frontful-style@0.x || 1.x":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/frontful-style/-/frontful-style-0.0.9.tgz#a06c1ad8c7c09d3d803f4def8868c9c9d50721cd"
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/frontful-style/-/frontful-style-0.0.10.tgz#72364cbcc4742e70c9f7a2c1a5fb25338b135017"
   dependencies:
+    frontful-utils "0.x || 1.x"
     inline-style-prefixer "^3.0.2"
     lodash "^4.17.4"
     prop-types "^15.x"
+
+"frontful-utils@0.x || 1.x":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/frontful-utils/-/frontful-utils-0.0.5.tgz#86c5fecf24c5bdc5cc87db73aa151c425b7403a9"
 
 fs-extra@^3.0.0:
   version "3.0.1"
@@ -3063,8 +3071,8 @@ loud-rejection@^1.0.0:
     signal-exit "^3.0.0"
 
 lru-cache@^4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.0.tgz#59be49a683b8d986a939f1ca60fdb6989f4b2046"
   dependencies:
     pseudomap "^1.0.1"
     yallist "^2.0.0"

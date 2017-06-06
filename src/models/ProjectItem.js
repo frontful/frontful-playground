@@ -6,7 +6,7 @@ import {Project} from './Project'
   project: models.global(Project),
 }))
 @model.format({
-  taskId: null,
+  taskId: 0,
 })
 export class ProjectItem extends TodoItem {
   constructor(...args) {

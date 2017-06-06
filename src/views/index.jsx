@@ -1,45 +1,36 @@
 import React from 'react'
-import style from 'frontful-style/react'
+import {style} from 'frontful-style'
 import {Project} from '../models/Project'
 import {resolver} from 'frontful-resolver'
-import {autobind} from 'core-decorators'
-import browserConfig from 'frontful-config/browser'
 
 @resolver.config(({models}) => ({
-  project: models.global(Project, {
-    name: browserConfig.defaultProjectName,
-  })
+  project: models.global(Project)
 }))
 @resolver.bind((resolve) => {
   resolve(({project}) => ({
     name: project.name,
-    setName(name) {
-      project.name = name
+    changeName(event) {
+      project.name = event.target.value
     }
   }))
 })
 @style(({css}) => {
   css('.name', {
     textAlign: 'center',
+    fontSize: '30px',
   })
 })
 export default class Views extends React.PureComponent {
-  @autobind
-  setName(event) {
-    this.props.setName(event.target.value)
-  }
-
   render() {
-    const {style, name} = this.props
+    const {style, name, changeName} = this.props
     return (
       <div className={style.css('name')}>
         <div>
           {name}
         </div>
-        <input
-          value={name || ''}
-          onChange={this.setName}
-        />
+        <div>
+          <input value={name} onChange={changeName} />
+        </div>
       </div>
     )
   }

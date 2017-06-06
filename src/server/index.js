@@ -1,4 +1,4 @@
-require('frontful-style').styleManager.reset()
-require('frontful-model').model.reset()
+require('frontful-style').reset()
+require('frontful-model').reset()
 
 export default require('./mounts')

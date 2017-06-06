@@ -1,3 +1,6 @@
+// .babelrc has no effect on transpilation
+// it's present only to proxy config for tools such as `source-preview` atom plugin
+
 {
   "presets": [
     "frontful"

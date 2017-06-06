@@ -3,35 +3,19 @@ import '../views/index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Views from '../views'
-import {Models} from 'frontful-model'
-import {Resolver} from 'frontful-resolver'
-import {StyleManager} from 'frontful-style/react'
+import initialize from '../common/initialize'
+import {Style} from 'frontful-style'
 
-const models = new Models({
-  config: {
-    'frontful-router': {
-      mapping: {},
-    }
-  }
-})
+const {models, resolver} = initialize(<Views />)
 
-const resolver = new Resolver(<Views />, {
-  models: models,
-})
+window.frontful.environment.coldreload.serializer = () => models.serialize()
+window.frontful.environment.coldreload.deserializer = (state) => models.deserialize(state)
 
-window.frontful.environment.coldreload.serializer = () => {
-  return models.serialize()
-}
-
-window.frontful.environment.coldreload.deserializer = (state) => {
-  models.deserialize(state)
-}
-
-resolver.execute().then((Views) => {
+resolver.execute().then((Application) => {
   ReactDOM.render(
-    <StyleManager>
-      <Views />
-    </StyleManager>,
+    <Style.Session>
+      <Application />
+    </Style.Session>,
     document.getElementById('app')
   )
 })

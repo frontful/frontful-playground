@@ -1,6 +1,6 @@
 module.exports = {
   common: {
-    defaultProjectName: 'Zoo',
+    appName: 'Frontful playground',
   },
   browser: {
   },

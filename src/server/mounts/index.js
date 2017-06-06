@@ -5,6 +5,7 @@ import main from './main'
 const app = express()
 
 app.use('/assets', assets)
+app.use('/', assets.root)
 app.use('/', main)
 
 export default app

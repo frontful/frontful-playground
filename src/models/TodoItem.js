@@ -1,10 +1,10 @@
-import {model, format} from 'frontful-model'
+import {model, formatter} from 'frontful-model'
 
 @model.format({
-  text: null,
+  text: '',
   compleated: false,
-  tags: format.map(null),
-  itemId: null,
+  tags: formatter.map(null),
+  itemId: 0,
 })
 export class TodoItem {
   constructor() {

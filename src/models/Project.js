@@ -1,10 +1,10 @@
 import {ProjectItem} from './ProjectItem'
 import {Todo} from './Todo'
-import {model, format} from 'frontful-model'
+import {model, formatter} from 'frontful-model'
 
 @model.format({
-  name: null,
-  items: format.array(format.model(ProjectItem)),
+  name: 'Project name',
+  items: formatter.array(formatter.model(ProjectItem)),
 })
 export class Project extends Todo {
 }
