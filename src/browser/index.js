@@ -4,12 +4,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Views from '../views'
 import {Models} from 'frontful-model'
+import {Project} from '../models/Project'
 import {StyleManager} from 'frontful-style/react'
 import {autorun, action} from 'mobx'
 
-import {Project} from '../models/Project'
-
-const models = new Models()
+const models = new Models({})
 
 window.frontful.environment.coldreload.serializer = () => {
   return models.serialize()
@@ -30,7 +29,6 @@ autorun(() => {
 })
 
 if (project.items.length === 0) {
-  // Test simple actions on project model
   action(() => {
     project.items.push({
       text: 'Capybara',
