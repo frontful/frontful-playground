@@ -1,37 +1,25 @@
 import React from 'react'
-import {style} from 'frontful-style'
-import {Project} from '../models/Project'
+import {Router} from 'frontful-router'
 import {resolver} from 'frontful-resolver'
 
-@resolver.config(({models}) => ({
-  project: models.global(Project)
-}))
+import Input from './pages/input'
+import Output from './pages/output'
+
 @resolver.bind((resolve) => {
-  resolve(({project}) => ({
-    name: project.name,
-    changeName(event) {
-      project.name = event.target.value
-    }
+  resolve(() => ({
+    Application: (
+      <Router>
+        <Input selector="/" />
+        <Input selector="/input" />
+        <Output selector="/output" />
+      </Router>
+    ),
   }))
 })
-@style(({css}) => {
-  css('.name', {
-    textAlign: 'center',
-    fontSize: '30px',
-  })
-})
-export default class Views extends React.PureComponent {
+export default class Index extends React.PureComponent {
   render() {
-    const {style, name, changeName} = this.props
     return (
-      <div className={style.css('name')}>
-        <div>
-          {name}
-        </div>
-        <div>
-          <input value={name} onChange={changeName} />
-        </div>
-      </div>
+      <this.props.Application />
     )
   }
 }
