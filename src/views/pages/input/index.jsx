@@ -1,13 +1,18 @@
 import React from 'react'
+import {HackerNews} from '../../../models/HackerNews'
 import {Link} from 'frontful-router'
 import {Project} from '../../../models/Project'
 import {resolver} from 'frontful-resolver'
 import {style} from 'frontful-style'
 
 @resolver.config(({models}) => ({
-  project: models.global('input_project', Project)
+  project: models.global(Project),
+  hackerNews: models.global(HackerNews),
 }))
 @resolver.bind((resolve) => {
+  resolve(({hackerNews}) => ({
+    top: hackerNews.top(),
+  }))
   resolve(({project}) => ({
     name: project.name,
     changeName(event) {
@@ -23,7 +28,7 @@ import {style} from 'frontful-style'
 })
 export default class Input extends React.PureComponent {
   render() {
-    const {style, name, changeName} = this.props
+    const {style, name, changeName, top} = this.props
     return (
       <div className={style.css('name')}>
         <div>
@@ -37,6 +42,13 @@ export default class Input extends React.PureComponent {
         </div>
         <div>
           <input value={name} onChange={changeName} />
+        </div>
+        <div>
+          {top.map((item) => (
+            <div key={item}>
+              {item}
+            </div>
+          ))}
         </div>
       </div>
     )

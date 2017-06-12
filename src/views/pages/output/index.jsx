@@ -5,7 +5,7 @@ import {resolver} from 'frontful-resolver'
 import {style} from 'frontful-style'
 
 @resolver.config(({models}) => ({
-  project: models.global('output_project', Project)
+  project: models.global(Project)
 }))
 @resolver.bind((resolve) => {
   resolve(({project}) => ({
