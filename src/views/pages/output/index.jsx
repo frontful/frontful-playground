@@ -4,10 +4,10 @@ import {Project} from '../../../models/Project'
 import {resolver} from 'frontful-resolver'
 import {style} from 'frontful-style'
 
-@resolver.config(({models}) => ({
+@resolver.define(({models}) => ({
   project: models.global(Project)
 }))
-@resolver.bind((resolve) => {
+@resolver((resolve) => {
   resolve(({project}) => ({
     name: project.name,
     changeName(event) {

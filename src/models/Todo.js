@@ -1,7 +1,7 @@
 import {TodoItem} from './TodoItem'
 import {model, formatter} from 'frontful-model'
 
-@model.format({
+@model({
   filter: '',
   items: formatter.array(formatter.model(TodoItem)),
 })

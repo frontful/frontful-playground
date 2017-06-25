@@ -1,6 +1,6 @@
 import {model, formatter} from 'frontful-model'
 
-@model.format({
+@model({
   text: '',
   compleated: false,
   tags: formatter.map(null),

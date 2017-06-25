@@ -2,10 +2,10 @@ import {TodoItem} from './TodoItem'
 import {model} from 'frontful-model'
 import {Project} from './Project'
 
-@model.config(({models}) => ({
+@model.define(({models}) => ({
   project: models.global(Project),
 }))
-@model.format({
+@model({
   taskId: 0,
 })
 export class ProjectItem extends TodoItem {

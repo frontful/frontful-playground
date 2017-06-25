@@ -1,6 +1,6 @@
-import {dal} from 'frontful-dal'
+import {dao} from 'frontful-dao'
 
-@dal.config(() => ({
+@dao(() => ({
   url: 'https://hacker-news.firebaseio.com/v0/',
   mapping: {
     top: () => ({

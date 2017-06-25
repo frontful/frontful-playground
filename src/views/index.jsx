@@ -5,21 +5,20 @@ import {resolver} from 'frontful-resolver'
 import Input from './pages/input'
 import Output from './pages/output'
 
-@resolver.bind((resolve) => {
+@resolver((resolve) => {
   resolve(() => ({
-    Application: (
+    View: (
       <Router>
-        <Input selector="/" />
-        <Input selector="/input" />
-        <Output selector="/output" />
+        <Input pattern="/" />
+        <Input pattern="/input" />
+        <Output pattern="/output" />
       </Router>
     ),
   }))
 })
 export default class Index extends React.PureComponent {
   render() {
-    return (
-      <this.props.Application />
-    )
+    const {View} = this.props
+    return <View />
   }
 }

@@ -11,12 +11,12 @@ function compileContext(element, options) {
     models.deserialize(global.frontful.environment.coldreload.state)
   }
 
-  return resolver.execute().then((Application) => {
+  return resolver.execute().then((View) => {
     const styleManagerSession = style.manager.getSession(options.req.headers['user-agent'])
     const view = ReactDOMServer.renderToString(
-      <Style.Session session={styleManagerSession}>
-        <Application />
-      </Style.Session>
+      <Style session={styleManagerSession}>
+        <View />
+      </Style>
     )
 
     return {
