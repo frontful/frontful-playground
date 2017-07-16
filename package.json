@@ -4,9 +4,11 @@
   "private": true,
   "description": "Playground and experiments on Frontful infrastructure",
   "scripts": {
-    "build": "frontful-environment build",
+    "build": "yarn test && frontful-environment build",
     "start": "frontful-environment start",
-    "start:build": "frontful-environment build && PORT=8000 node ./build/server"
+    "start:build": "yarn build && cross-env PORT=8000 node ./build/server",
+    "test": "yarn test:eslint",
+    "test:eslint": "node ./node_modules/eslint/bin/eslint.js --max-warnings 0 ."
   },
   "frontful": {
     "config": "./config.js"
@@ -25,5 +27,8 @@
     "normalize.css": "^7.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1"
   }
 }
