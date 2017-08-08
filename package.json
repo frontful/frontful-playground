@@ -2,7 +2,7 @@
   "name": "frontful-playground",
   "version": "1.0.0",
   "private": true,
-  "description": "Playground and experiments on Frontful infrastructure",
+  "description": "Isomorphic React, Express and Frontful infrastructure playground for development",
   "scripts": {
     "build": "yarn test && frontful-environment build",
     "start": "frontful-environment start",
