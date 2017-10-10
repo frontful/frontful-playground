@@ -14,19 +14,19 @@
     "config": "./config.js"
   },
   "dependencies": {
-    "core-decorators": "^0.19.0",
+    "core-decorators": "^0.20.0",
     "express": "^4.15.2",
-    "frontful-config": "0.x || 1.x",
-    "frontful-dao": "0.x || 1.x",
-    "frontful-environment": "0.x || 1.x",
-    "frontful-model": "0.x || 1.x",
-    "frontful-resolver": "0.x || 1.x",
-    "frontful-router": "0.x || 1.x",
-    "frontful-style": "0.x || 1.x",
+    "frontful-config": "2.x",
+    "frontful-dao": "2.x",
+    "frontful-environment": "2.x",
+    "frontful-model": "2.x",
+    "frontful-resolver": "2.x",
+    "frontful-router": "2.x",
+    "frontful-style": "2.x",
     "mobx": "^3.1.9",
     "normalize.css": "^7.0.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "cross-env": "^5.0.1"
